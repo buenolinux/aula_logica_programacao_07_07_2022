@@ -3,44 +3,32 @@ programa
 	inclua biblioteca Util -->u
 	//inteiro numero_sorteados, vet[10]
 	
-inteiro i,x, bkp, quantidade = 10, numero_digitado
-	inteiro numero_sorteados, vet[10], inicial, meio,final
+inteiro i,x, bkp, quantidade = 1000, numero_digitado
+	inteiro numero_sorteados, vet[1000], inicial, meio,final
 	logico encontrado = falso
 	funcao inicio()
 	{
 		para(i=0; i< quantidade; i++)
 		{
-			numero_sorteados = u.sorteia(1,200)
+			numero_sorteados = u.sorteia(1,2000)
 			vet[i] = numero_sorteados
 			
 		}
 
 
 		// Laço de ordenção 
-
-		para(i= 0; i< quantidade; i++)
-		{
-			para(x= i+1; x< quantidade; x++)
-			{
-				se(vet[i] > vet[x])
-				{
-					   bkp = vet[i]
-					vet[i] = vet[x]
-					vet[x] = bkp
-				}
-			}
+		ordenacao()
 		
-		}
 
 		// exibir dados do vetor 
-		para(i=0; i<quantidade; i++)
-		{
-			escreva(vet[i]," ")
-		}
+		/*
+		 exibir()
+
+		*/
 		escreva("Digite um número para pesquisara \n")
 		leia(numero_digitado)
 		
-		pesquisa_linear()
+		//pesquisa_linear()
 		pesquisa_binaria()
 
 		
@@ -48,6 +36,7 @@ inteiro i,x, bkp, quantidade = 10, numero_digitado
 
 		
 	}
+	// Criando funções 
 	
 	funcao pesquisa_linear()
 	{
@@ -67,7 +56,8 @@ inteiro i,x, bkp, quantidade = 10, numero_digitado
 		senao
 		{
 			escreva("Não encontrado ")	
-		}	
+		}
+			
 	}
 	// final da função pesquisa linear
 
@@ -75,7 +65,7 @@ inteiro i,x, bkp, quantidade = 10, numero_digitado
 	{
 		
 		 inicial =0
-		 final =9
+		 final = quantidade
 		 encontrado = falso
 		
 		enquanto((inicial <= final)e (nao encontrado ))
@@ -92,6 +82,7 @@ inteiro i,x, bkp, quantidade = 10, numero_digitado
 			senao{
 				inicial = meio +1
 				}
+				escreva(vet[meio]," ")
 			
 		}
 
@@ -103,6 +94,31 @@ inteiro i,x, bkp, quantidade = 10, numero_digitado
 		{
 			escreva("Valor inexistente. \n")	
 		}	
+	}
+	// Função de ordenação
+	funcao ordenacao()
+	{
+		para(i= 0; i< quantidade; i++)
+		{
+			para(x= i+1; x< quantidade; x++)
+			{
+				se(vet[i] > vet[x])
+				{
+					   bkp = vet[i]
+					vet[i] = vet[x]
+					vet[x] = bkp
+				}
+			}
+		
+		}	
+	}
+	// Função de exibir 
+	funcao exibir()
+	{
+		para(i=0; i<quantidade; i++)
+		{
+			escreva(vet[i]," ")
+		}
 	}
 	
 }
