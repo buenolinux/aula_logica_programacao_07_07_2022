@@ -23,6 +23,8 @@ inclua biblioteca Util --> u
 				escreva(" * ")	
 			}
 		}	
-		
+		escreva(local)
+	
 	}
+	
 }
