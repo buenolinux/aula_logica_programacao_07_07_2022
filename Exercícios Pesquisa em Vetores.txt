@@ -1,0 +1,11 @@
+1. Analisador de performance de algoritmos
+
+Crie um algoritmo que gere 1000 números aleatoriamente, no intervalo de 1 a 2000.
+O programa deve implementar dois algoritmos de pesquisa:
+- Pesquisa Linear
+- Pesquisa Binária
+O usuário pede para pesquisar um número na lista criada, e o programa deve efetuar a pesquisa duas vezes: uma vez com cada algoritmo.
+Cronometre o tempo que o programa leva para encontrar (ou não) o número em cada caso.
+Opcionalmente: Existe uma função denominada "tempo_decorrido()" na biblioteca Util do Portugol. Tente usar essa função para contar o tempo decorrido em cada caso, em vez de cronometrar manualmente.
+Logo após, responda à seguinte pergunta:
+- "Qual dos algoritmos retornou um resultado mais rapidamente?"
