@@ -1,6 +1,11 @@
 programa
 {
 	
+// matrizes 
+// primeiro para a linha 
+// segundo para a coluna
+inclua biblioteca Util --> u
+
 	inteiro vet[30], i
 	funcao inicio()
 	{
